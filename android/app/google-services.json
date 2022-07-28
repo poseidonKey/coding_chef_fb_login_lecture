@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "974299315149",
+    "project_id": "coding-chef-fb-login-lecture",
+    "storage_bucket": "coding-chef-fb-login-lecture.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974299315149:android:92ccb4f5db3a9fa0f6e284",
+        "android_client_info": {
+          "package_name": "com.example.codingchef_getx_login_fb_lecture"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974299315149-blgqh9a86q0vnlc75o3cvfu8vgca9l8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpM5uyuxN7WDxpi4CAE8aF0Ds6VX42Nls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974299315149-blgqh9a86q0vnlc75o3cvfu8vgca9l8r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
