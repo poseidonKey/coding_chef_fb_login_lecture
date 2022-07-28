@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 class AuthController extends GetxController {
   static AuthController instance = Get.find();
   late Rx<User?> _user;
-  
+
   FirebaseAuth authentication = FirebaseAuth.instance;
   @override
   void onReady() {
@@ -22,7 +22,7 @@ class AuthController extends GetxController {
     authentication.signOut();
   }
 
-  void login(String email, password) async {
+  Future<void> login(String email, password) async {
     try {
       await authentication.signInWithEmailAndPassword(
           email: email, password: password);
@@ -41,7 +41,7 @@ class AuthController extends GetxController {
     }
   }
 
-  void register(String email, password) async {
+  Future<void> register(String email, password) async {
     try {
       await authentication.createUserWithEmailAndPassword(
           email: email, password: password);
