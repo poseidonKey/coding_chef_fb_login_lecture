@@ -1,11 +1,10 @@
 import 'package:codingchef_getx_login_fb_lecture/controller/auth_controller.dart';
-import 'package:codingchef_getx_login_fb_lecture/screens/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class SignupPage extends StatelessWidget {
+  const SignupPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,26 +20,22 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Icon(
-                  Icons.phone_android,
+                  Icons.card_travel_outlined,
+                  color: Colors.deepPurple,
                   size: 100,
                 ),
                 const SizedBox(
                   height: 30,
                 ),
                 Text(
-                  'Hello',
+                  'Sign Up',
                   style: GoogleFonts.bebasNeue(fontSize: 36.0),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
-                  'Welcome back',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                Text('Thank you for join us',
+                    style: GoogleFonts.bebasNeue(fontSize: 28)),
                 const SizedBox(
                   height: 50,
                 ),
@@ -88,7 +83,7 @@ class LoginPage extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    AuthController.instance.login(
+                    AuthController.instance.register(
                         emailController.value.text.trim(),
                         passwordController.value.text.trim());
                   },
@@ -101,7 +96,7 @@ class LoginPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(12)),
                       child: const Center(
                         child: Text(
-                          'Sign in',
+                          'Sign up',
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
@@ -117,11 +112,11 @@ class LoginPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text('Not a member?'),
+                    const Text('Already registered?'),
                     GestureDetector(
-                      onTap: () => Get.to(() => const SignupPage()),
+                      onTap: () => Get.back(),
                       child: const Text(
-                        ' Register Now!',
+                        ' Go back Login page!',
                         style: TextStyle(
                             color: Colors.blue, fontWeight: FontWeight.bold),
                       ),
